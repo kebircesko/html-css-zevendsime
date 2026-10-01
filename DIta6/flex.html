@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Example</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container Flex */
+.container {
+    display: flex;
+    gap: 10px;
+    border: 2px solid #1e40af;
+    padding: 10px;
+    background-color: #e0f2fe;
+}
+
+/* Kutitë */
+.box {
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* Efekte hover për të parë transformimin */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Kutia 1: flex:1 */
+.box1 {
+    flex: 1; /* flex-grow:1, flex-shrink:1, flex-basis:0 */
+}
+
+/* Kutia 2: flex-grow më i madh */
+.box2 {
+    flex-grow: 2; /* rritet më shumë se të tjerat */
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/* Kutia 3: flex-basis fikse */
+.box3 {
+    flex: 0 1 150px; /* nuk rritet, mund të tkurret, fillon me 150px */
+}
+</style>
+</head>
+<body>
+
+<h2>Shembull i Flexbox</h2>
+<p>Kuti 1 = flex:1, Kuti 2 = flex-grow:2, Kuti 3 = flex-basis:150px</p>
+
+<div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+</div>
+
+<p>Provoni të ndryshoni madhësinë e dritares për të parë se si tkurren ose zgjaten kutitë!</p>
+
+</body>
+</html>

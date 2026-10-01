@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript HYRJE</title>
+    <style>
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+        section{
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        button{
+            padding: 5px 10px;
+            margin-top: 5px;
+        }
+        input{
+            padding:5px;
+            margin:5px 0;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript - HYRJE</h1>
+
+<!-- ======================= -->
+<section>
+<h2>1️⃣ Ndrysho Ngjyren e Tekstit</h2>
+
+<h3 id="teksti">JavaScript eshte interesant!</h3>
+<button onclick="ndryshoNgjyren()">Ndrysho Ngjyren</button>
+
+</section>
+
+<!-- ======================= -->
+<section>
+<h2>2️⃣ Fsheh / Shfaq Paragrafin</h2>
+
+<p id="paragrafi">Ky eshte nje paragraf per testim.</p>
+<button onclick="fsheh()">Fsheh / Shfaq</button>
+
+</section>
+
+<!-- ======================= -->
+<section>
+<h2>3️⃣ Kontrollo Numrin</h2>
+
+<input type="number" id="numri" placeholder="Shkruaj nje numer">
+<button onclick="kontrolloNumrin()">Kontrollo</button>
+<p id="rezultati"></p>
+
+</section>
+
+<!-- ======================= -->
+<section>
+<h2>4️⃣ Random Background</h2>
+
+<button onclick="randomColor()">Ndrysho Background</button>
+
+</section>
+
+<!-- ======================= -->
+<section>
+<h2>5️⃣ Guess the Number (1-10)</h2>
+
+<input type="number" id="guess" placeholder="Gjeje numrin">
+<button onclick="kontrolloGuess()">Provo</button>
+<p id="mesazhi"></p>
+
+</section>
+
+<!-- ======================= -->
+<section>
+<h2>6️⃣ Forma me Alert Mesazh</h2>
+
+<label>Emri:</label><input type="text" id="emri" placeholder="Shkruaj emrin">
+<label>Email:</label><input type="email" id="email" placeholder="Shkruaj email">
+<label>Mosha:</label><input type="number" id="mosha" placeholder="Shkruaj moshen">
+
+<button onclick="dergoFormen()">Dergo</button>
+
+</section>
+
+<!-- ======================= -->
+<script>
+
+// 1️⃣ Ndrysho Ngjyren
+function ndryshoNgjyren(){
+    document.getElementById("teksti").style.color = "red";
+}
+
+// 2️⃣ Fsheh / Shfaq
+function fsheh(){
+    let p = document.getElementById("paragrafi");
+
+    if(p.style.display === "none"){
+        p.style.display = "block";
+    } else {
+        p.style.display = "none";
+    }
+}
+
+// 3️⃣ Kontrollo Numrin
+function kontrolloNumrin(){
+    let nr = Number(document.getElementById("numri").value);
+    let rezultat = document.getElementById("rezultati");
+
+    if(nr > 0){
+        rezultat.innerHTML = "Numri eshte pozitiv";
+    }
+    else if(nr < 0){
+        rezultat.innerHTML = "Numri eshte negativ";
+    }
+    else{
+        rezultat.innerHTML = "Numri eshte zero";
+    }
+}
+
+// 4️⃣ Random Background
+function randomColor(){
+    let ngjyra = "#" + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = ngjyra;
+}
+
+// 5️⃣ Guess the Number
+let numriSekret = Math.floor(Math.random() * 10) + 1;
+
+function kontrolloGuess(){
+    let user = Number(document.getElementById("guess").value);
+    let mesazhi = document.getElementById("mesazhi");
+
+    if(user === numriSekret){
+        mesazhi.innerHTML = "Urime! E gjete numrin!";
+    } else {
+        mesazhi.innerHTML = "Gabim! Provo perseri.";
+    }
+}
+
+// 6️⃣ Forma me Alert
+function dergoFormen(){
+    let emri = document.getElementById("emri").value;
+    let email = document.getElementById("email").value;
+    let mosha = document.getElementById("mosha").value;
+
+    if(emri === "" || email === "" || mosha === ""){
+        alert("Ju lutem plotesoni te gjitha fushat!");
+    } else {
+        alert("Faleminderit " + emri + 
+              "!\nEmail: " + email + 
+              "\nMosha: " + mosha);
+    }
+}
+
+</script>
+
+</body>
+</html>

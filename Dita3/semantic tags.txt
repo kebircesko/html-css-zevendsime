@@ -1,0 +1,8 @@
+Nëse përmbajtja është…	Përdor tagun
+Kryesore në faqe	<main>
+Një pjesë me temë	<section>
+Postim / lajm i pavarur	<article>
+Anësore / sidebar	<aside>
+Kreu i faqes	<header>
+Fundi i faqes	<footer>
+Vetëm kuti për CSS	<div>

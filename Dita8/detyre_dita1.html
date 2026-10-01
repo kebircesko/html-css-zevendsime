@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript – Detyra me Zgjidhje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+        }
+        .box {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #3498db;
+        }
+        .solution {
+            background: #eaf2f8;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 4px solid #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<!-- =========================
+     DETYRA 1 – VARIABLES
+========================= -->
+<h1>Detyra 1: Shto rezultate duke përdorur variabla</h1>
+<div class="box">
+Krijo:
+- var për qytetin  
+- let për moshën (dhe ndryshoje vlerën)  
+- const për emrin e shkollës  
+Shfaq rezultatet.
+</div>
+
+<div class="solution" id="task1"></div>
+
+<!-- =========================
+     DETYRA 2 – OPERATORS
+========================= -->
+<h1>Detyra 2: Operatorët matematikorë</h1>
+<div class="box">
+Krijo dy numra <b>a</b> dhe <b>b</b>.  
+Shfaq mbledhjen, zbritjen, shumëzimin dhe pjesëtimin.
+</div>
+
+<div class="solution" id="task2"></div>
+
+<!-- =========================
+     DETYRA 3 – CONDITIONALS
+========================= -->
+<h1>Detyra 3: if / else if / else</h1>
+<div class="box">
+Krijo një variabël <b>nota</b> (1–5).  
+Shfaq mesazh sipas notës.
+</div>
+
+<div class="solution" id="task3"></div>
+
+<!-- =========================
+     DETYRA 4 – LOOPS
+========================= -->
+<h1>Detyra 4: Loops</h1>
+<div class="box">
+- for: numrat 1–5  
+- while: numrat 1–3  
+- do...while: të ekzekutohet të paktën një herë
+</div>
+
+<div class="solution" id="task4"></div>
+
+<!-- =========================
+     DETYRA 5 – ARRAY & for...of
+========================= -->
+<h1>Detyra 5: Array dhe for...of</h1>
+<div class="box">
+Krijo një array me 3 vlera dhe shfaqi me for...of.
+</div>
+
+<div class="solution" id="task5"></div>
+
+<script>
+/* =========================
+   ZGJIDHJET
+========================= */
+
+/* DETYRA 1 – VARIABLES */
+var city = "Prizren";
+let age = 14;
+age = 15;
+const school = "Shkolla Digjitale";
+
+document.getElementById("task1").innerText =
+    "Qyteti: " + city +
+    " | Mosha: " + age +
+    " | Shkolla: " + school;
+
+/* DETYRA 2 – OPERATORS */
+let a = 10;
+let b = 5;
+
+document.getElementById("task2").innerHTML =
+    "a + b = " + (a + b) + "<br>" +
+    "a - b = " + (a - b) + "<br>" +
+    "a * b = " + (a * b) + "<br>" +
+    "a / b = " + (a / b);
+
+/* DETYRA 3 – CONDITIONALS */
+let nota = 4;
+let mesazh = "";
+
+if (nota === 5) {
+    mesazh = "Shkëlqyeshëm";
+} else if (nota === 4) {
+    mesazh = "Shumë mirë";
+} else if (nota === 3) {
+    mesazh = "Mirë";
+} else {
+    mesazh = "Duhet më shumë ushtrime";
+}
+
+document.getElementById("task3").innerText =
+    "Nota: " + nota + " → " + mesazh;
+
+/* DETYRA 4 – LOOPS */
+let forText = "";
+for (let i = 1; i <= 5; i++) {
+    forText += i + " ";
+}
+
+let whileText = "";
+let w = 1;
+while (w <= 3) {
+    whileText += w + " ";
+    w++;
+}
+
+let doWhileText = "";
+let d = 5;
+do {
+    doWhileText += d + " ";
+    d++;
+} while (d <= 3);
+
+document.getElementById("task4").innerText =
+    "for: " + forText +
+    " | while: " + whileText +
+    " | do...while: " + doWhileText;
+
+/* DETYRA 5 – ARRAY & for...of */
+let items = ["HTML", "CSS", "JavaScript"];
+let result = "";
+
+for (let item of items) {
+    result += item + " ";
+}
+
+document.getElementById("task5").innerText =
+    "Array values: " + result;
+
+</script>
+
+</body>
+</html>

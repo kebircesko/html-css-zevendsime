@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detyrat HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #333;
+        }
+        
+        h1 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+        
+        .red-paragraph {
+            color: red;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .youtube-link {
+            display: inline-block;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            padding: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .youtube-link:hover {
+            transform: scale(1.05);
+        }
+        
+        .youtube-link img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .contact-links {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background-color: #45a049;
+        }
+        
+        .bottom-section {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+        
+        .bookmark-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        
+        .bookmark-link:hover {
+            background-color: #0b7dda;
+        }
+        
+        .detyra {
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zgjidhja e Detyrave HTML</h1>
+        
+        <!-- Detyra 1 -->
+        <div class="detyra">
+            <h2>Detyra 1 – Struktura bazë HTML</h2>
+            <p><strong>Kërkesa:</strong> Krijo një dokument HTML nga zero që përmban: DOCTYPE, html, head, body, title dhe një paragraf me tekstin "Unë po mësoj HTML".</p>
+            <p><strong>Zgjidhja:</strong> Paragrafi i kërkuar:</p>
+            <p>Unë po mësoj HTML</p>
+        </div>
+        
+        <!-- Detyra 2 -->
+        <div class="detyra">
+            <h2>Detyra 2 – Tituj & Paragrafë</h2>
+            <p><strong>Kërkesa:</strong> Shto një titull h1 me emrin e shkollës, një titull h3 me emrin e kursit dhe dy paragrafë (njëri normal, tjetri me ngjyrë të kuqe duke përdorur style).</p>
+            <h1>Shkolla e Teknologjisë dhe Inovacionit</h1>
+            <h3>Kursi i Zhvillimit Web</h3>
+            <p>Ky është një paragraf normal i cili përmban informacione rreth kursit tonë në zhvillimin web.</p>
+            <p class="red-paragraph">Ky është një paragraf me ngjyrë të kuqe duke përdorur stil të brendshëm CSS.</p>
+        </div>
+        
+        <!-- Detyra 3 -->
+        <div class="detyra">
+            <h2>Detyra 3 – Formatimi i Tekstit</h2>
+            <p><strong>Kërkesa:</strong> Krijo një paragraf ku përdor tag-et: b ose strong, i ose em, mark, u dhe br.</p>
+            <p>
+                Ky është një <strong>tekst i theksuar</strong> (duke përdorur strong).<br>
+                Ky është një <em>tekst i pjerrët</em> (duke përdorur em).<br>
+                Ky është një <mark>tekst i theksuar me ngjyrë</mark> (duke përdorur mark).<br>
+                Ky është një <u>tekst i nënvijuar</u> (duke përdorur u).<br>
+                <b>Këto elemente të ndryshme të formatimit</b> janë shumë të dobishme për të theksuar pjesët e rëndësishme të tekstit.
+            </p>
+        </div>
+        
+        <!-- Detyra 4 -->
+        <div class="detyra">
+            <h2>Detyra 4 – Link & Bookmark</h2>
+            <p><strong>Kërkesa:</strong> Shto një link që hap Google dhe një link që të çon poshtë faqes duke përdorur id.</p>
+            <p>Ky është një link që hap <a href="https://www.google.com" target="_blank">Google</a> në një tab të ri.</p>
+            <p>Ky është një link që ju çon në <a href="#bottom-section" class="bookmark-link">pjesën e poshtme të faqes</a> (bookmark).</p>
+        </div>
+        
+        <!-- Detyra 5 -->
+        <div class="detyra">
+            <h2>Detyra 5 – Foto, Link & Kontakt</h2>
+            <p><strong>Kërkesa:</strong> Shto një foto, bëje atë link që hap YouTube dhe shto një link mailto dhe një link tel.</p>
+            
+            <div class="image-container">
+                <p>Klikoni mbi fotën për të hapur YouTube:</p>
+                <a href="https://www.youtube.com" target="_blank" class="youtube-link">
+                    <img src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Teknologji dhe mësim">
+                </a>
+                <p><em>Foto: Teknologji dhe mësim (nga Unsplash)</em></p>
+            </div>
+            
+            <div class="contact-links">
+                <p><strong>Lidhuni me ne:</strong></p>
+                <a href="mailto:info@shkolla.example.com">Dërgoni email</a>
+                <a href="tel:+355123456789">Telefononi: +355 12 345 6789</a>
+            </div>
+        </div>
+        
+        <!-- Seksioni i poshtëm për bookmark -->
+        <div id="bottom-section" class="bottom-section">
+            <h2>Ju keni arritur në pjesën e poshtme të faqes!</h2>
+            <p>Kjo është pjesa ku jeni të drejtuar nga linku bookmark në detyrën 4.</p>
+            <p>Për të kthyer lart, klikoni <a href="#top">këtu</a>.</p>
+        </div>
+        
+        <footer>
+            <p>Detyrat HTML - Krijuar për qëllime edukative</p>
+        </footer>
+    </div>
+</body>
+</html>
